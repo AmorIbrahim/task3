@@ -252,9 +252,22 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 20.0, vertical: 10),
-                    child: Text("Offers",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20.0)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Offers",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 20.0)),
+                        Row(
+                          children: [
+                            Text("View all",
+                                style: TextStyle(color: Colors.deepOrange,
+                                     fontSize: 13.0)),
+                            Icon(Icons.arrow_right_alt,color: Colors.deepOrange,size: 20,)
+
+                        ],),
+                      ],
+                    ),
                   ),
                 ),
                 Image(image: AssetImage("assets/images/KFC.jpeg")),
